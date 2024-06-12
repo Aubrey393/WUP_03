@@ -68,7 +68,17 @@ summary.aov(model1)
 ```
 The P-vaule is 0.000116 which less than .5, so with that said we reject the null hypothesis.
 
+There is a difference in alcohol consumption based on where people sit.
+
+
+## When significant follow up with TukeyHSD  
+
+```{r}
+plot(TukeyHSD(model1))
+```
+According to the TukeyHSD  test above there is no statistical difference in alcohol consumption and where the person sits.
 
 ## Conclusions
 
-
+The original questions was weather if the row of where someone sits, have 
+difference between the alcohol consumed. According to graphical summary, the box plot shows that those who sat in the back consumed more alcohol in comparison to those in the middle and front. Furthermore, the numerical summary shows the mean of alcohol consumption was 8.5 for those in the back, much higher than those in the front with a mean of 1.8 and those is the middle with a 3.3 mean. Then the inferential results showed that The P-value is 0.000116 which less than .5, so with that said we reject the null hypothesis. The null hypothesis says that there is no difference between the average number of drinks imbibed between people conditioned on the row they sit in, however while we do reject the null hypothesis according to the TukeyHSD there is no statistical difference in alcohol consumption.
