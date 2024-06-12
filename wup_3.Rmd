@@ -24,14 +24,50 @@ The data came from UCDavis in the year...
 
 $H_0$: There is no difference between the average number of drinks imbibed between people conditioned on the row they sit in.
 
-$H_A$: The average number drinks is different between at least two rows.   
+$H_A$: The average number drinks is different between at least two rows. 
 
-## Now with ggplot - first select the basic data
+# Methods
+In the Davisdata set is a categorical variable, alcohol is numerical.
+
+we are trying to predict alcohol~seat so we use the nunerical~cat helper
+
+
+# Results
+
+
+## Descriptive results
+
+### Graphical summary
 
 ```{r}
 basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 ```
-## Now add in boxplot
+Now add in boxplot
+
+```{r}
+basicCN + geom_boxplot()
+```
+
+This boxplot shows that those who sat in the back consumed more alchol in comparison to those in the middle and front.
+
+### Numerical Summary
+
+```{r}
+favstats(alcohol~Seat,data=ucdavis1)
+```
+
+
+The numerical results show the mean of alcohol consumptions was 8.5 for those in the back, much higher than those in the front with a mean of 1.8 and those is the middle with a 3.3 mean.
+
+
+### Inferential Results
+
+Now with ggplot - first select the basic data
+
+```{r}
+basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
+```
+Now add in boxplot
 
 ```{r}
 basicCN + geom_boxplot()
@@ -44,9 +80,6 @@ basicCN + geom_boxplot()
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
-## Numerical Summarys 
-
-## Inferential Tests
 
 ## Conclusions
 
