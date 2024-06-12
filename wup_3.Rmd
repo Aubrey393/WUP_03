@@ -62,23 +62,11 @@ The numerical results show the mean of alcohol consumptions was 8.5 for those in
 
 ### Inferential Results
 
-Now with ggplot - first select the basic data
-
 ```{r}
-basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
 ```
-Now add in boxplot
-
-```{r}
-basicCN + geom_boxplot()
-```
-  
-  
-### get fancy  
-
-```{r}
-basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
-```
+The P-vaule is 0.000116 which less than .5, so with that said we reject the null hypothesis.
 
 
 ## Conclusions
