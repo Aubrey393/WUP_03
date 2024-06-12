@@ -76,6 +76,8 @@ There is a difference in alcohol consumption based on where people sit.
 ```{r}
 plot(TukeyHSD(model1))
 ```
+
+
 According to the TukeyHSD  test above there is no statistical difference in alcohol consumption and where the person sits.
 
 ## Conclusions
