@@ -57,7 +57,7 @@ favstats(alcohol~Seat,data=ucdavis1)
 ```
 
 
-The numerical results show the mean of alcohol consumptions was 8.5 for those in the back, much higher than those in the front with a mean of 1.8 and those is the middle with a 3.3 mean.
+The numerical results show the mean of alcohol consumption was 8.5 for those in the back, much higher than those in the front with a mean of 1.8 and those is the middle with a 3.3 mean.
 
 
 ### Inferential Results
